@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0;
-    outline: 1px dashed #bbb;
+    /* outline: 1px dashed #bbb; */
 }
 
 html{
@@ -220,6 +220,8 @@ header div > a{
 }
 
 /* Set up learning section */
+/* tweak learning padding, font size, colors */
+
 .learning{
     grid-column: full-start / full-end; 
     background-color: #e8e9eb;  
@@ -235,7 +237,7 @@ header div > a{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 0 4.5rem;
+    padding: 0 4.5rem 2rem;
 }
 
 .learning-block{
@@ -253,6 +255,70 @@ header div > a{
     text-transform: uppercase;
 }
 
+/* Set up thesis section */
+.thesis{
+    grid-column: full-start / full-end;  
+}
+
+.thesis h1{
+    text-align: center;
+    padding: 2rem 0;                      /* 32px above and below, from the spec */
+}
+
+.thesis-container{
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;   /* 60 / 40 split */
+}
+
+.thesis-main{
+    padding: 0 1.5rem;          /* 24px around the video side */
+}
+
+.videocontainer video{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thesis-main-text h3{
+    margin: 1.5rem 0 0.5rem;
+}
+
+.thesis-main-text p{
+    font-size: small;
+    font-weight: lighter;
+    padding-bottom: 2rem;
+}
+
+.thesis-side{
+    padding-right: 1.5rem;
+}
+
+.thesis-block{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr; 
+    align-items: center;
+    padding: 1rem;                /* 16px inside each card */
+    gap: 1rem;                    /* space between image and text */
+}
+
+.thesis-block:first-child{
+    background-color: #d8d8d8; 
+}
+
+.thesis-block img{
+    width: 100%;
+    height: auto;
+}
+
+.thesis-block-text h3{
+    font-size: medium;
+}
+
+.thesis-block-text p{
+    font-size: smaller;
+    margin-top: 0.5rem;
+}
 
 
 /* Set up footer */
@@ -401,6 +467,25 @@ footer > ul > li > a:visited{
         padding-top: 1rem;
     }
 
+    /* update learning section */
+
+.learning-container{
+    grid-template-columns: 1fr;   /* one column instead of three */
+    gap: 0.5rem;                  /* ~8px between bars */
+    padding: 0 1rem;              /* ~16px at the sides */
+    text-align: center;
+}
+
+.learning-block{
+    background-color: #d8d8d8;    /* gray bar, check the spec's shade */
+}
+
+.learning-block img,
+.learning-label,
+.learning-desc{
+    display: none;
+}
+
     /* update footer section */
     footer > ul{
         display: none;
@@ -412,7 +497,7 @@ footer > ul > li > a:visited{
     }
 
 
-}
+
 
    
 
